@@ -25,13 +25,14 @@ class RegressionNN(nn.Module):
         return x
 #Model initializing
 model=RegressionNN()
+criterion=nn.MSELoss()
 optimizer=optim.Adam(model.parameters())
 #Training loop
 epochs=500
 for epoch in range(epochs):
     optimizer.zero_grad()
     output=model(x)
-    loss=nn.MSELoss()(output,y)
+    loss=criterion(output,y)
     loss.backward()
     optimizer.step()
     if epoch%50==0:
