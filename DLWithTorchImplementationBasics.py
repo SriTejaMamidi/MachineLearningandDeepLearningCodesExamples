@@ -1,6 +1,8 @@
+#Importing the required modules
 import torch
 import numpy as np
 import pandas as pd
+
 x=torch.tensor([1,2,3])
 print("\nValues from the tensor:",x)
 print("\nDatatype is:",x.dtype)
