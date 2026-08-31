@@ -1,3 +1,4 @@
+#Importing the required modules
 import pandas as pd
 df=pd.read_csv('employee_attrition_dirty.csv')
 #Checking if there are any null values in the data
